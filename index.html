@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Documentación CSS</title>
+</head>
+
+<body>
+    <header id="header-main">
+        <nav id="navbar">
+            <h1 id="title-nav">DOCUMENTACIÓN CSS</h1>
+            <ul>
+                <li><a class="nav-link" href="#Introducción"><b>Introducción</b></a></li>
+                <li><a class="nav-link" href="#Estructura_CSS"><b>Estructura CSS</b></a></li>
+                <li><a class="nav-link" href="#Margenes_y_Rellenos"><b>Margnes y Relleno</b></a></li>
+                <li><a class="nav-link" href="#Bordes"><b>Bordes</b></a></li>
+                <li><a class="nav-link" href="#Colores"><b>Colores</b></a></li>
+                <li><a class="nav-link" href="#Fondos"><b>Fondos</b></a></li>
+                <li><a class="nav-link" href="#Fuentes_y_Tipografías"><b>Fuentes y Tipografías</b></a></li>
+                <li><a class="nav-link" href="#Texto_y_Alineaciones"><b>Texto y Alineaciones</b></a></li>
+                <li><a class="nav-link" href="#Propiedad_Position"><b>Propiedad Position</b></a></li>
+                <li><a class="nav-link" href="#Flexbox_CSS"><b>Flexbox CSS</b></a></li>
+                <li><a class="nav-link" href="#Grid_CSS"><b>Grid CSS</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-doc">
+        <section id="Introducción" class="main-section">
+            <header>
+                <h2>Introducción</h2>
+            </header>
+            <p class="style-text">CSS es un lenguaje de hojas de estilos creado para controlar el aspecto o presentación
+                de los documentos
+                electrónicos definidos con HTML y XHTML. CSS es la mejor forma de separar los contenidos y su
+                presentación y es imprescindible para crear páginas web complejas. <br><br>
+
+                Separar la definición de los contenidos y la definición de su aspecto presenta numerosas ventajas, ya
+                que obliga a crear documentos HTML/XHTML bien definidos y con significado completo (también llamados
+                "documentos semánticos"). Además, mejora la accesibilidad del documento, reduce la complejidad de su
+                mantenimiento y permite visualizar el mismo documento en infinidad de dispositivos diferentes.<br><br>
+
+                Al crear una página web, se utiliza en primer lugar el lenguaje HTML/XHTML para marcar los contenidos,
+                es decir, para designar la función de cada elemento dentro de la página: párrafo, titular, texto
+                destacado, tabla, lista de elementos, etc.<br><br>
+
+                Una vez creados los contenidos, se utiliza el lenguaje CSS para definir el aspecto de cada elemento:
+                color, tamaño y tipo de letra del texto, separación horizontal y vertical entre elementos, posición de
+                cada elemento dentro de la página, etc.
+            </p>
+        </section>
+        <section id="Estructura_CSS" class="main-section">
+            <header>
+                <h2>Estructura CSS</h2>
+            </header>
+            <p class="style-text">
+                Al igual que los documentos HTML, los documentos CSS son archivos de texto donde se escribe una serie de
+                órdenes y el cliente (navegador) las interpreta y aplica a los documentos HTML asociados.
+            </p>
+            <h3>Sintaxis básica</h3>
+            <p class="style-text">
+                La estructura CSS se basa en reglas que tienen el siguiente formato:
+            </p>
+            <img class="imageSintaxis" src="assets/img/sintaxis-css.PNG" alt="sintaxis">
+            <ul class="ul-content">
+                <li><b>Selector:</b> El selector es el elemento HTML que vamos a seleccionar del documento para
+                    aplicarle un
+                    estilo concreto. Por ejemplo, con p seleccionaríamos todas las etiquetas <p> del HTML. Más adelante
+                        veremos que esto puede ser mucho más complejo, y dedicaremos una serie de capítulos
+                        exclusivamente a este tema.</li>
+                <li><b>Propiedad:</b> La propiedad es una de las diferentes características que brinda el lenguaje CSS y
+                    que
+                    aplicaremos al selector para darle estilo.</li>
+                <li><b>Valor:</b> Cada propiedad CSS tiene una serie de valores concretos a que se le pueden asignar,
+                    con los
+                    que tendrá uno u otro comportamiento.</li>
+            </ul>
+            <h4>EJEMPLO</h4>
+            <code>
+                nav{<br>
+                    background: #333333; //color del navegador <br>
+                }
+            </code>
+        </section>
+        <section id="Margenes_y_Rellenos" class="main-section">
+            <header>
+                <h2>Margenes y Rellenos</h2>
+            </header>
+            <h3>Margenes (Margin)</h3>
+            <p class="style-text">
+                En el modelo de cajas, los márgenes (margin) son los espacios exteriores de un elemento. Es decir, el
+                espacio que hay entre el borde de un elemento y su exterior.
+            </p>
+            <ul class="ul-content">
+                <li><b>margin-top: </b>Establece un tamaño de margen superior.</li>
+                <li><b>margin-left: </b>Establece un tamaño de margen a la izquierda.</li>
+                <li><b>margin-right: </b>Establece un tamaño de margen a la derecha.</li>
+                <li><b>margin-bottom: </b>Establece un tamaño de margen inferior.</li>
+            </ul><br>
+            <p class="style-text">
+                Podemos aplicar diferentes márgenes a cada zona de un elemento utilizando cada una de estas propiedades,
+                o dejando al nevegador que lo haga de forma automática indicando el valor auto.
+            </p>
+
+            <h3>Rellenos (Padding)</h3>
+            <p class="style-text">
+                Al igual que con los márgenes, los padding tienen varias propiedades para indicar el relleno de cada
+                zona:
+            </p>
+            <ul class="ul-content">
+                <li><b>Padding-top: </b>Aplica un relleno interior en el espacio superior de un elemento.</li>
+                <li><b>Padding-left: </b>Aplica un relleno interior en el espacio izquierdo de un elemento.</li>
+                <li><b>Padding-right:</b>Aplica un relleno interior en el espacio derecho de un elemento.</li>
+                <li><b>Padding-bottom: </b>Aplica un relleno interior en el espacio inferior de un elemento.</li>
+            </ul><br>
+            <p class="style-text">
+                Hay que recordar diferenciar bien un margin de un padding, puesto que no son la misma cosa. Los rellenos
+                (padding) son los espacios que hay entre los bordes del elemento en cuestión y el contenido del elemento
+                (por la parte interior). Mientras que los márgenes (margin) son los espacios que hay entre los bordes
+                del elemento en cuestión y los bordes de otros elementos (parte exterior).
+            </p>
+        </section>
+        <section id="Bordes" class="main-section">
+            <header>
+                <h2>Bordes</h2>
+            </header>
+            <p class="style-text">
+                En CSS es posible especificar el aspecto que tendrán los bordes de cualquier elemento HTML, pudiendo
+                incluso, dar diferentes características a zonas particulares del borde, como por ejemplo, el borde
+                superior, el borde izquierdo, el borde derecho o el borde inferior.
+            </p>
+            <h3>Propiedades de bordes</h3>
+            <p class="style-text">Las propiedades básicas y específicas de los bordes en CSS son las siguientes:</p>
+            <ul class="ul-content">
+                <li><b>boder-color: </b>Especifica el color que se utilizará en el borde.</li>
+                <li><b>border-width: </b>Especifica un tamaño predefinido para el grosor del borde.</li>
+                <li><b>border-style: </b>Define el estilo para el borde a utilizar (ver más adelante).</li>
+            </ul>
+            <h3>Estilo de borde más usado</h3>
+            <p class="style-text">
+                el borde más frecuente suele ser solid, que no es más que un borde liso y continuo. Pueden utilizarse
+                cualquiera de los estilos indicados en la tabla anterior e incluso combinar con otras propiedades.
+                Recuerda que si no aplica una de ellas, se aplica el valor por defecto.
+            </p>
+            <h4>Ejemplo</h4>
+            <code>
+                nav{<br>
+                    border: solid #333333 2px;<br>
+                }
+            </code>
+        </section>
+        <section id="Colores" class="main-section">
+            <header>
+                <h2>Colores</h2>
+            </header>
+            <p class="style-text">
+                Uno de los primeros cambios de estilo que podemos pensar realizar en un documento HTML es hacer
+                variaciones en los colores de primer plano y de fondo. Esto es posible con las primeras dos propiedades
+                que veremos a continuación:
+            </p>
+            <ul class="ul-content">
+                <li><b>color: </b>Cambia el color del texto que está en el interior de un elemento.</li>
+                <li><b>background-color: </b>Cambia el color de fondo de un elemento.</li>
+            </ul><br>
+            <p class="style-text">
+                La propiedad color establece el color del texto, mientras que la propiedad background-color establece el
+                color de fondo del elemento.
+            </p>
+            <h3>Los formatos más usados para asignar los colores</h3>
+            <h4>Formato RGB</h4>
+            <p class="style-text">
+                Uno de los métodos más conocidos por los diseñadores gráficos es utilizar el formato RGB. Las siglas RGB
+                significan rojo, verde y azul, por lo que cada cifra (del 0 al 255) representa la intensidad de cada
+                componente de color. Como se puede ver en la siguiente imagen, si utilizamos una cantidad (0, 0, 0) de
+                cada canal, obtenemos el color negro. En cambio, si utilizamos una cantidad (255, 0, 0), obtendremos el
+                color rojo.
+            </p>
+            <h4>Ejemplo</h4>
+            <code>
+                //Propiedad Color <br>
+                p{<br>
+                    color: rgb(125, 80, 10);<br>
+                }<br>
+                //Propiedad Background-color <br>
+                nav{<br>
+                    background-color: rgb(125, 80, 10);<br>
+                }<br>
+            </code>
+            <h4>Formato Hexadecimal</h4>
+            <p class="style-text">
+                El formato hexadecimal es el más utilizado por los desarrolladores web, aunque en principio puede
+                parecer
+                algo extraño y complicado, sobre todo si no has oído hablar nunca del sistema hexadecimal (sistema en
+                base 16 en lugar del que utilizamos normalmente, en base 10).<br>
+
+                Cada par de letras simboliza el valor del RGB en el sistema de numeración hexadecimal, así pues, el
+                color #FF0000, o sea HEX(FF,00,00), es equivalente al RGB(255,0,0), que es también equivalente al HSL(0,
+                100%, 100%). Veamos algunos ejemplos para clarificarlo:
+            </p>
+            <h4>Ejemplo</h4>
+            <code>
+                //Propiedad Color <br>
+                p{<br>
+                    color: #FFFFFF;<br>
+                }<br>
+                //Propiedad Background-color <br>
+                nav{<br>
+                    background-color: #333333;<br>
+                }<br>
+            </code>
+        </section>
+        <section id="Fondos" class="main-section">
+            <header>
+                <h2>Fondos</h2>
+            </header>
+            <p class="style-text">
+                Es posible que, buscando hacer un diseño más avanzado, en lugar de utilizar un color de fondo quieras
+                utilizar imágenes. Para ello, CSS te proporciona la propiedad background-image, con la cuál puedes
+                indicar imágenes de fondo o, como veremos más adelante, incluso degradados de varios colores.
+            </p>
+            <h3>Imagenes de Fondo</h3>
+            <p class="style-text">
+                En el caso de querer utilizar una imagen de fondo, como ya hemos dicho, utilizaremos la propiedad
+                background-image y en el valor, el nombre de la imagen (o la dirección donde está alojada), siempre
+                rodeada del texto url().
+            </p>
+            <h3>Porpiedades para ingresar una imagende Fondo</h3>
+            <ul class="ul-content">
+                <li><b>background-image: none: </b>No utiliza ninguna imagen de fondo.</li>
+                <li><b>background-image: url(imagen.jpg): </b>Usa la imagen de nombre imagen.jpg como fondo.</li>
+            </ul><br>
+            <p class="style-text">
+                En el caso de que sólo se coloque el nombre de la imagen (por ejemplo, imagen.jpg), el navegador buscará
+                la imagen en la misma carpeta donde está el archivo CSS. Esto es lo que se llama una ruta relativa. En
+                el caso de que se coloque la ruta completa, por ejemplo https://i.emezeta.com/img/logo.png, se accederá
+                a la imagen alojada en esa dirección web. Esto es lo que se llama ruta absoluta.
+            </p>
+            <h4>Ejemplo</h4>
+            <code>
+                //Insertar una iamgen  de fondo <br>
+                body{ <br>
+                    background-iamge: url(https://i.emezeta.com/img/logo.png):<br>
+                }
+            </code>
+        </section>
+        <section id="Fuentes_y_Tipografías" class="main-section">
+            <header>
+                <h2>Fuentes y Tipografías</h2>
+            </header>
+            <p class="style-text">
+                Las tipografías (también denominadas fuentes) son una parte muy importante del mundo de CSS. De hecho,
+                son uno de los pilares del diseño web. La elección de una tipografía adecuada, su tamaño, color, espacio
+                entre letras, interlineado y otras características pueden variar mucho, de forma consciente o
+                inconsciente, la percepción en la que una persona interpreta o accede a los contenidos de una página.
+            </p>
+            <h3>Propiedades básicas</h3>
+            <p class="style-text">
+                Existe un amplio abanico de propiedades CSS para modificar las características básicas de las
+                tipografías a utilizar. Aunque existen muchas más, a continuación, veremos las propiedades CSS más
+                básicas para aplicar a cualquier tipo de tipografía:
+            </p>
+            <ul class="ul-content">
+                <li><b>font-family: </b>Indica el nombre de la fuente (tipografía) a utilizar.</li>
+                <li><b>font-size: </b>Indica el tamaño de la fuente.</li>
+                <li><b>font-style: </b>Indica el estilo de la fuente.</li>
+                <li><b>font-weight: </b>Indica el peso (grosor) de la fuente (100-800).</li>
+            </ul><br>
+            <h4>Ejemplo</h4>
+            <code>
+                p{<br>
+                    font-size: 15px; <br>
+                    font-family: Arial, Helvetica, sans-serif;<br>
+                    font-weight: 600; <br>
+                }
+            </code>
+        </section>
+        <section id="Texto_y_Alineaciones" class="main-section">
+            <header>
+                <h2>Texto y Alineaciones</h2>
+            </header>
+            <p class="style-text">
+                CSS dispone de ciertas propiedades relacionadas con el texto de una página, pero alejándose de criterios
+                de tipografías, y centrándose más en objetivos de alineación o tratamiento de espaciados. Veamos algunas
+                de estas propiedades:
+            </p>
+            <ul class="ul-content">
+                <li><b>letter-spaging: </b>Espacio entre letras (tracking)</li>
+                <li><b>word-spacing: </b>Espacio entre palabras</li>
+                <li><b>line height: </b>Altura de una línea (interlineado)</li>
+                <li><b>text-indent: </b>Indentación de texto (sangría)</li>
+                <li><b>white-space: </b>Comportamiento de los espacios</li>
+                <li><b>tab-size: </b>Ancho de las tabulaciones (espacio o tamaño)</li>
+                <li><b>direction: </b>Dirección del texto</li>
+            </ul>
+            <h3>Alineaciones</h3>
+            <p class="style-text">
+                También existen varias propiedades CSS que permiten modificar las diferentes alineaciones de los textos
+                en su conjunto. Veamos un resumen de ellas:
+            </p>
+            <ul class="ul-content">
+                <li><b>text-align: </b>Justificación del texto</li>
+                <li><b>text-justify: </b>Método de justificación de textos</li>
+                <li><b>ext-overflow:</b> Comportamiento cuando el texto no cabe</li>
+            </ul>
+        </section>
+        <section id="Propiedad_Position" class="main-section">
+            <header>
+                <h2>Propiedad Position</h2>
+            </header>
+            <p class="style-text">
+                A grandes rasgos, y como aprendimos en temas anteriores, si tenemos varios elementos en línea (uno
+                detrás de otro) aparecerán colocados de izquierda hacia derecha, mientras que si son elementos en bloque
+                se verán colocados desde arriba hacia abajo. Estos elementos se pueden ir combinando y anidando
+                (incluyendo unos dentro de otros), construyendo así esquemas más complejos. <br><br>
+                Hasta ahora, hemos estado trabajando sin saberlo en lo que se denomina posicionamiento estático
+                (static), donde todos los elementos aparecen con un orden natural según donde estén colocados en el
+                HTML. Este es el modo por defecto en que un navegador renderiza una página. <br><br>
+                Sin embargo, existen otros modos alternativos de posicionamiento, que podemos cambiar mediante la
+                propiedad position, que nos pueden interesar para modificar la posición en donde aparecen los diferentes
+                elementos y su contenido. <br><br>
+                A la propiedad position se le pueden indicar los siguientes valores: <br><br>
+            </p>
+            <ul class="ul-content">
+                <li><b>static: </b>Posicionamiento estático. Utiliza el orden natural de los elementos HTML.</li>
+                <li><b>relative: </b>Posicionamiento relativo. Los elementos se mueven ligeramente en base a su posición
+                    estática.</li>
+                <li><b>absolute: </b>Posicionamiento absoluto. Los elementos se colocan en base al contenedor padre.
+                </li>
+                <li><b>fixed: </b>Posicionamiento fijo. Idem al absoluto, pero aunque hagamos scroll no se mueve.</li>
+                <li><b>sticky: </b>Posicionamiento «pegado». Similar al relativo, usado para pegar menús a la parte
+                    superior.</li>
+            </ul>
+            <h4>Ejemplo</h4>
+            <code>
+                section{ <br>
+                    position: fixed <br>
+                }
+            </code>
+        </section>
+        <section id="Flexbox_CSS" class="main-section">
+            <header>
+                <h2>Flexbox CSS</h2>
+            </header>
+            <p class="style-text">
+                Tradicionalmente, en CSS se ha utilizado el posicionamiento (static, relative, absolute...), los
+                elementos en línea o en bloque (y derivados) o los float, lo que a grandes rasgos no dejaba de ser un
+                sistema de creación de diseños bastante tradicional que no encaja con los retos que tenemos hoy en día:
+                sistemas de escritorio, dispositivos móviles, múltiples resoluciones, etc. <br><br>
+                Flexbox es un sistema de elementos flexibles que llega con la idea de olvidar estos mecanismos y
+                acostumbrarnos a una mecánica más potente, limpia y personalizable, en la que los elementos HTML se
+                adaptan y colocan automáticamente y es más fácil personalizar los diseños. Está especialmente diseñado
+                para crear, mediante CSS, estructuras de una sóla dimensión. <br>
+            </p>
+            <h3>Conceptos</h3>
+            <p class="style-text">
+                Para empezar a utilizar flexbox lo primero que debemos hacer es conocer algunos de los elementos básicos
+                de este nuevo esquema, que son los siguientes:
+            </p>
+            <img class="imageSintaxis" src="assets/img/flexbox.PNG" alt="flexbox css">
+            <ul class="ul-content">
+                <li><b>Contenedor: </b>Es el elemento padre que tendrá en su interior cada uno de los ítems flexibles.
+                    Observa que al contrario que muchas otras estructuras CSS, por norma general, en Flex establecemos
+                    las propiedades al elemento padre.</li>
+                <li><b>Eje principal: </b> Los contenedores flexibles tendrán una orientación principal específica. Por
+                    defecto, es en horizontal (en fila).</li>
+                <li><b>Eje secundario: </b>De la misma forma, los contenedores flexibles tendrán una orientación
+                    secundaria, perpendicular a la principal. Si la principal es en horizontal, la secundaria será en
+                    vertical, y viceversa.</li>
+                <li><b>Item: </b>Cada uno de los hijos flexibles que tendrá el contenedor en su interior.</li>
+            </ul>
+        </section>
+        <section id="Grid_CSS" class="main-section">
+            <header>
+                <h2>Grid CSS</h2>
+            </header>
+            <p class="style-text">
+                Uno de los procesos más problematicos y frustrantes de CSS, sobre todo para novatos o principiantes, es
+                el proceso de colocar y distribuir los elementos a lo largo de una página. Mecanismos como
+                posicionamiento, floats o elementos en bloque o en línea, suelen ser insuficientes (o muy complejos)
+                para crear un layout o estructuras para páginas web actuales. <br><br>
+                El sistema flexbox es una gran mejora, sin embargo, está orientado a estructuras de una sola dimensión,
+                por lo que aún necesitamos algo más potente para estructuras web más específicas o complejas. Con el
+                paso del tiempo, muchos frameworks y librerías utilizan un sistema grid donde definen una cuadrícula
+                determinada, y modificando los nombres de las clases de los elementos HTML, podemos darle tamaño,
+                posición o colocación. <br><br>
+                Grid CSS nace de esa necesidad, y recoge las ventajas de ese sistema, añadiendole numerosas mejoras y
+                características que permiten crear rápidamente cuadrículas sencillas y potentes de forma prácticamente
+                instantánea. <br> <br>
+            </p>
+            <h3>Conceptos</h3>
+            <p class="style-text">
+                Antes de comenzar con Grid CSS, quizás sería conveniente dominar el sistema Flexbox, ya que Grid toma la
+                filosofía y bases de él. Para utilizar Grid CSS necesitaremos tener en cuenta una serie de conceptos que
+                utilizaremos a partir de ahora y que definiremos a continuación: <br>
+            </p>
+            <img class="imageSintaxis" src="assets/img/Grid.PNG" alt="Grid CSS">
+            <ul class="ul-content">
+                <li><b>Contenedor: </b>El elemento padre contenedor que definirá la cuadrícula o rejilla.</li>
+                <li><b>Item: </b>Cada uno de los hijos que contiene la cuadrícula (elemento contenedor).</li>
+                <li><b>Celda (grid cell): </b>Cada uno de los cuadritos (unidad mínima) de la cuadrícula.</li>
+                <li><b>Area (grid area): </b>Región o conjunto de celdas de la cuadrícula.</li>
+                <li><b>Banda (grid track): </b>Banda horizontal o vertical de celdas de la cuadrícula.</li>
+                <li><b>Línea (grid line): </b>Separador horizontal o vertical de las celdas de la cuadrícula.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
