@@ -172,6 +172,11 @@ code {
     code {
         font-size: 14px;
     }
+    #navbar ul {
+        height: 76%;
+    
+    }
+    
 
 }
 
@@ -199,10 +204,14 @@ code {
         overflow-x: hidden;
     }
     #navbar ul {
+        height: 85%;
         border-bottom: solid #FF6666 2px;
         background: #FFF;
-    }
     
+    }
+    .nav-link{
+        font-size: 14px;
+    }   
     #title-nav {
         margin-bottom: 2%;
     }
